@@ -59,6 +59,7 @@ module.exports = app => {
         // Deletes a note with specific id
         app.delete("/api/notes/:id", function (req, res) {
             // slices the note by id out of the object and deletes
+            //splice(start, deleteCount)
             notes.splice(req.params.id, 1);
             //updates notes
             updateNoteDatabase();
